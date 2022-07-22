@@ -23,12 +23,13 @@ public class Gun : ProjectileShooter
 
     override protected void shoot()
     {
-
+       
         currentProjectile = bullets[bulletIndex];
+
         currentProjectile.transform.position = spawnPosition.position;
-        currentProjectile.transform.rotation= spawnPosition.rotation;
+        currentProjectile.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        currentProjectile.GetComponent<TrailRenderer>().Clear();
         currentProjectile.SetActive(true);
-        print("shoot");
         bulletIndex++;
         bulletIndex %= bullets.Count;
         base.shoot();

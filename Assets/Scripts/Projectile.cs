@@ -5,9 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
      
-    public void launch(float force)
+    public void launch(Vector3 force)
     {
-        print(force); 
-        GetComponent<Rigidbody>().AddForce(transform.forward* force); 
+        GetComponent<Rigidbody>().AddForce(force); 
     }
 }

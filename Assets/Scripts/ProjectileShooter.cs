@@ -8,7 +8,9 @@ public class ProjectileShooter : MonoBehaviour
 {
     [SerializeField]private float projectileForce;
     [SerializeField] private GameObject controller;
-    [SerializeField] protected int maxProjectiles = 10; 
+    [SerializeField] protected int maxProjectiles = 10;
+    [SerializeField] private GameObject shootDirection; 
+
     protected virtual GameObject currentProjectile { get; set; }
     private XRGrabInteractable interactable;
     public void Start()
@@ -26,6 +28,6 @@ public class ProjectileShooter : MonoBehaviour
 
     protected virtual void shoot()
     {
-        currentProjectile.GetComponent<Projectile>().launch(projectileForce); 
+        currentProjectile.GetComponent<Projectile>().launch(shootDirection.transform.forward* projectileForce ); 
     }
 }

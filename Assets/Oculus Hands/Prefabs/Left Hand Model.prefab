@@ -388,6 +388,7 @@ MonoBehaviour:
   controller: {fileID: 3608059234348726628, guid: b0de29d49d8aad34994edc7aa6e267ee,
     type: 3}
   animator: {fileID: 109434732388006827}
+  text: {fileID: 2922408182558846608, guid: 640a0bef6b117d24c901c9898dc90d23, type: 3}
 --- !u!1 &109434732395284511
 GameObject:
   m_ObjectHideFlags: 0
